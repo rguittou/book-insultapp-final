@@ -12,6 +12,7 @@ public class InsultGenerator {
 		String theInsult = "";
 		
 		try {
+			Class.forName("org.postgresql.Driver");
 			String databaseURL = "jdbc:postgresql://";
 			databaseURL += System.getenv("POSTGRESQL_SERVICE_HOST");
 			databaseURL += "/" + System.getenv("POSTGRESQL_DATABASE");
